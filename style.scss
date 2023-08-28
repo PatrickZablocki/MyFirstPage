@@ -1,0 +1,39 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+//  Here is My Variable for the Text fontsize
+$font-size-headline:3rem;
+$font-size-forheadline:2rem;
+$font-size-desrciption:1rem;
+
+//  Here is the Shadow for Box and for the font
+$box-shadow-xs:5px 5px 5px;
+$box-shadow-s:8px 8px 8px;
+$box-shadow-medium:10px 10px 10px;
+$box-shadow-base:12px 12px 12px;
+
+$text-shadow-Headline:12px 12px 12px;
+$text-shadow-forHeadline:8px 8px 8px;
+
+// Here is the Variable for Color
+$body-color:#0430ed;
+$Main-color:#061559;
+$Secondary-color:#044858;
+$Text-color:#c0d0d5;
+$Headline-color:#7ba7b5;
+$forHeadline-color:#4bbee3;
+
+
+body{
+
+        header{
+
+        }
+        }
