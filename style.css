@@ -9,4 +9,33 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+body header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #061559;
+}
+body header h1 {
+  font-size: 3rem;
+  color: #c0d0d5;
+}
+body header nav, body header ul, body header li, body header a {
+  display: inline-block;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 12px;
+  color: #c0d0d5;
+}
+body header nav, body header ul, body header li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 120px;
+}
+body header a:hover {
+  text-decoration: underline;
+  color: #7ba7b5;
 }/*# sourceMappingURL=style.css.map */
