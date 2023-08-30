@@ -38,4 +38,38 @@ body header nav, body header ul, body header li {
 body header a:hover {
   text-decoration: underline;
   color: #7ba7b5;
+}
+body main {
+  background-color: #131936;
+}
+body main .Main-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  color: #c0d0d5;
+  font-size: 1rem;
+}
+body main .Main-content h2 {
+  font-size: 2rem;
+  color: #4bbee3;
+}
+body main .Main-content .circle {
+  height: 600px;
+  width: 600px;
+  max-height: 80vw;
+  max-width: 80vw;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 20px solid #044858;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+body main .Main-content .circle img {
+  width: 100%;
+}
+body main .Main-content .About-me {
+  display: block;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
