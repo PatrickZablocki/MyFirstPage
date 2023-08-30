@@ -23,7 +23,7 @@ $text-shadow-Headline:12px 12px 12px;
 $text-shadow-forHeadline:8px 8px 8px;
 
 // Here is the Variable for Color
-$body-color:#0430ed;
+$body-color:#131936;
 $Main-color:#061559;
 $Secondary-color:#044858;
 $Text-color:#c0d0d5;
@@ -61,6 +61,42 @@ body{
                     text-decoration: underline;
                     color: $Headline-color;
                 }
+        }
+        main{
+            background-color: $body-color;
+            .Main-content{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                overflow: hidden;
+                color: $Text-color;
+                font-size: $font-size-desrciption;
+
+                h2{
+                    font-size:$font-size-forheadline;
+                    color: $forHeadline-color;
+                }
+
+                    .circle{
+                        height: 600px;
+                        width: 600px;
+                        max-height: 80vw;
+                        max-width: 80vw;
+                        overflow: hidden;
+                        border-radius:50% ;
+                        border: 20px solid $Secondary-color;
+                        display: flex;
+                        justify-content: center;
+                        align-items:start;
+                            }
+                            .circle img{
+                                width: 100%;
+                            }
+                    .About-me{
+                        display: block;
+                        justify-content: space-between;
+                    }
+            }
         }
     
     }
