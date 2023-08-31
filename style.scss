@@ -23,12 +23,12 @@ $text-shadow-Headline:12px 12px 12px;
 $text-shadow-forHeadline:8px 8px 8px;
 
 // Here is the Variable for Color
-$body-color:#131936;
-$Main-color:#061559;
-$Secondary-color:#044858;
+$body-color:#297AE3;
+$Main-color:#15171C;
+$Secondary-color:#232933;
 $Text-color:#c0d0d5;
-$Headline-color:#7ba7b5;
-$forHeadline-color:#4bbee3;
+$Headline-color:#2E3744;
+$forHeadline-color:#B3B4B6;
 
 
 body{
@@ -59,14 +59,17 @@ body{
                 }
                 a:hover{
                     text-decoration: underline;
-                    color: $Headline-color;
+                    color: $body-color;
                 }
         }
         main{
-            background-color: $body-color;
+            background-color: $Secondary-color;
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             .Main-content{
                 display: flex;
-                justify-content: start;
+                justify-content: space-between;
                 align-items: center;
                 overflow: hidden;
                 color: $Text-color;
@@ -92,11 +95,57 @@ body{
                             .circle img{
                                 width: 100%;
                             }
-                    .About-me{
+                    .Home{
                         display: block;
-                        justify-content: space-between;
+                        justify-content: end;
+                        overflow: hidden;
+                        font-size: 1.5rem;
+                        align-items: center;
+                        margin-right: 150px;
+                        margin-bottom: 130px;
+                        
+                            h2{
+                                margin-bottom: 20px;
+                                overflow: hidden;
+                                font-size: 3rem;
+                            }
+                            p{
+                                overflow: hidden;
+                                font-size: 2rem;
+                            }
                     }
             }
         }
+                #About-me{
+                    background: $Secondary-color;
+                    min-height: 100vh;
+                    width:100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                
+                    .About-me{
+                        max-width: 700px;
+                        margin-top: 2rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 2px solid #fff;
+                        cursor: pointer;
+                    }
+                    .question{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .question h3{
+                        font-size: 1.8rem;
+                    }
+                    .answer{
+                        padding-top: 1rem;
+                        line-height: 1.6;
+                        font-size: 1.4rem;
+                    }
+                
+                }
     
     }

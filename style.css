@@ -17,7 +17,7 @@ body header {
   text-align: center;
   align-items: center;
   overflow: hidden;
-  background-color: #061559;
+  background-color: #15171C;
 }
 body header h1 {
   font-size: 3rem;
@@ -37,14 +37,17 @@ body header nav, body header ul, body header li {
 }
 body header a:hover {
   text-decoration: underline;
-  color: #7ba7b5;
+  color: #297AE3;
 }
 body main {
-  background-color: #131936;
+  background-color: #232933;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 body main .Main-content {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
   color: #c0d0d5;
@@ -52,7 +55,7 @@ body main .Main-content {
 }
 body main .Main-content h2 {
   font-size: 2rem;
-  color: #4bbee3;
+  color: #B3B4B6;
 }
 body main .Main-content .circle {
   height: 600px;
@@ -61,7 +64,7 @@ body main .Main-content .circle {
   max-width: 80vw;
   overflow: hidden;
   border-radius: 50%;
-  border: 20px solid #044858;
+  border: 20px solid #232933;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -69,7 +72,50 @@ body main .Main-content .circle {
 body main .Main-content .circle img {
   width: 100%;
 }
-body main .Main-content .About-me {
+body main .Main-content .Home {
   display: block;
+  justify-content: end;
+  overflow: hidden;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-right: 150px;
+  margin-bottom: 130px;
+}
+body main .Main-content .Home h2 {
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-size: 3rem;
+}
+body main .Main-content .Home p {
+  overflow: hidden;
+  font-size: 2rem;
+}
+body #About-me {
+  background: #232933;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #About-me .About-me {
+  max-width: 700px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+}
+body #About-me .question {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+body #About-me .question h3 {
+  font-size: 1.8rem;
+}
+body #About-me .answer {
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
 }/*# sourceMappingURL=style.css.map */
