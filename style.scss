@@ -1,13 +1,3 @@
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-    appearance: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-}
 //  Here is My Variable for the Text fontsize
 $font-size-headline:3rem;
 $font-size-forheadline:2rem;
@@ -30,9 +20,18 @@ $Text-color:#c0d0d5;
 $Headline-color:#2E3744;
 $forHeadline-color:#B3B4B6;
 
-
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
 body{
-
+    scroll-behavior: smooth;
         header{
             display: flex;
             justify-content: center;
@@ -118,6 +117,19 @@ body{
                             }
                     }
             }
+            .Main-content span{
+                color: aqua;
+            }
+            @keyframes slideRight{
+                0%{
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                100%{
+                    transform:translateX(0px);
+                    opacity:1;
+                }
+            }
         }
                 #About-me{
                     background: $Secondary-color;
@@ -127,13 +139,17 @@ body{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                
+                        h2{
+                            font-size: 3rem;
+                            color: $Text-color;
+                        }
                     .About{
-                        max-width: 700px;
+                        max-width: 1000px;
                         margin-top: 2rem;
                         padding-bottom: 1rem;
-                        border-bottom: 2px solid #fff;
+                        border-bottom: 2px solid #2799ca;
                         cursor: pointer;
+                        color: $Text-color;
                     }
                     .question{
                         display: flex;

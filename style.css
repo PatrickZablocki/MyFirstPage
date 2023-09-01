@@ -11,6 +11,9 @@
   box-sizing: border-box;
 }
 
+body {
+  scroll-behavior: smooth;
+}
 body header {
   display: flex;
   justify-content: center;
@@ -93,6 +96,19 @@ body main .Main-content .Home p {
   overflow: hidden;
   font-size: 2rem;
 }
+body main .Main-content span {
+  color: aqua;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 body #About-me {
   background: #232933;
   min-height: 100vh;
@@ -102,12 +118,17 @@ body #About-me {
   flex-direction: column;
   align-items: center;
 }
+body #About-me h2 {
+  font-size: 3rem;
+  color: #c0d0d5;
+}
 body #About-me .About {
-  max-width: 700px;
+  max-width: 1000px;
   margin-top: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #2799ca;
   cursor: pointer;
+  color: #c0d0d5;
 }
 body #About-me .question {
   display: flex;
