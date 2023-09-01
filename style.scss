@@ -39,7 +39,10 @@ body{
             text-align: center;
             align-items: center;
             overflow: hidden;
-            background-color: $Main-color;
+            background-color: #15171cd7;
+            position: fixed;
+            width: 100%;
+
 
                 h1{
                     font-size: $font-size-headline;
@@ -74,7 +77,7 @@ body{
                 overflow: hidden;
                 color: $Text-color;
                 font-size: $font-size-desrciption;
-
+                margin-top: 200px;
                 h2{
                     font-size:$font-size-forheadline;
                     color: $forHeadline-color;
@@ -125,7 +128,7 @@ body{
                     flex-direction: column;
                     align-items: center;
                 
-                    .About-me{
+                    .About{
                         max-width: 700px;
                         margin-top: 2rem;
                         padding-bottom: 1rem;
@@ -141,11 +144,36 @@ body{
                         font-size: 1.8rem;
                     }
                     .answer{
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 1.4s ease;
+                    }
+                    .answer p{
                         padding-top: 1rem;
                         line-height: 1.6;
                         font-size: 1.4rem;
                     }
-                
+                    .About.active .answer{
+                        max-height: 300px;
+                        animation: fade 1s ease-in-out;
+                    }
+                    .About.active svg{
+                        transform: rotate(180deg);
+                    }
+                    svg{
+                        transition: transform 0.5s ease-in;
+                    }
+
+                    @keyframes fade {
+                        from{
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+                        to{
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
                 }
     
     }
