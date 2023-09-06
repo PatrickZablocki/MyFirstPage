@@ -1,13 +1,3 @@
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-    appearance: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-}
 //  Here is My Variable for the Text fontsize
 $font-size-headline:3rem;
 $font-size-forheadline:2rem;
@@ -23,23 +13,35 @@ $text-shadow-Headline:12px 12px 12px;
 $text-shadow-forHeadline:8px 8px 8px;
 
 // Here is the Variable for Color
-$body-color:#0430ed;
-$Main-color:#061559;
-$Secondary-color:#044858;
+$body-color:#297AE3;
+$Main-color:#15171C;
+$Secondary-color:#232933;
 $Text-color:#c0d0d5;
-$Headline-color:#7ba7b5;
-$forHeadline-color:#4bbee3;
+$Headline-color:#2E3744;
+$forHeadline-color:#B3B4B6;
 
-
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
 body{
-
+    scroll-behavior: smooth;
         header{
             display: flex;
             justify-content: center;
             text-align: center;
             align-items: center;
             overflow: hidden;
-            background-color: $Main-color;
+            background-color: #15171cd7;
+            position: fixed;
+            width: 100%;
+
 
                 h1{
                     font-size: $font-size-headline;
@@ -59,8 +61,135 @@ body{
                 }
                 a:hover{
                     text-decoration: underline;
-                    color: $Headline-color;
+                    color: $body-color;
                 }
         }
+        main{
+            background-color: $Secondary-color;
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            .Main-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                overflow: hidden;
+                color: $Text-color;
+                font-size: $font-size-desrciption;
+                margin-top: 200px;
+                h2{
+                    font-size:$font-size-forheadline;
+                    color: $forHeadline-color;
+                }
+
+                    .circle{
+                        height: 600px;
+                        width: 600px;
+                        max-height: 80vw;
+                        max-width: 80vw;
+                        overflow: hidden;
+                        border-radius:50% ;
+                        border: 20px solid $Secondary-color;
+                        display: flex;
+                        justify-content: center;
+                        align-items:start;
+                            }
+                            .circle img{
+                                width: 100%;
+                            }
+                    .Home{
+                        display: block;
+                        justify-content: end;
+                        overflow: hidden;
+                        font-size: 1.5rem;
+                        align-items: center;
+                        margin-right: 150px;
+                        margin-bottom: 130px;
+                        
+                            h2{
+                                margin-bottom: 20px;
+                                overflow: hidden;
+                                font-size: 3rem;
+                            }
+                            p{
+                                overflow: hidden;
+                                font-size: 2rem;
+                            }
+                    }
+            }
+            .Main-content span{
+                color: aqua;
+            }
+            @keyframes slideRight{
+                0%{
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                100%{
+                    transform:translateX(0px);
+                    opacity:1;
+                }
+            }
+        }
+                #About-me{
+                    background: $Secondary-color;
+                    min-height: 100vh;
+                    width:100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                        h2{
+                            font-size: 3rem;
+                            color: $Text-color;
+                        }
+                    .About{
+                        max-width: 1000px;
+                        margin-top: 2rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 2px solid #2799ca;
+                        cursor: pointer;
+                        color: $Text-color;
+                    }
+                    .question{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .question h3{
+                        font-size: 1.8rem;
+                    }
+                    .answer{
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 1.4s ease;
+                    }
+                    .answer p{
+                        padding-top: 1rem;
+                        line-height: 1.6;
+                        font-size: 1.4rem;
+                    }
+                    .About.active .answer{
+                        max-height: 300px;
+                        animation: fade 1s ease-in-out;
+                    }
+                    .About.active svg{
+                        transform: rotate(180deg);
+                    }
+                    svg{
+                        transition: transform 0.5s ease-in;
+                    }
+
+                    @keyframes fade {
+                        from{
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+                        to{
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                    }
+                }
     
     }
