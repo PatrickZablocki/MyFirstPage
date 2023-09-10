@@ -98,13 +98,14 @@ body{
                                 width: 100%;
                             }
                     .Home{
-                        display: block;
+                        display:block;
                         justify-content: end;
                         overflow: hidden;
                         font-size: 1.5rem;
                         align-items: center;
                         margin-right: 150px;
                         margin-bottom: 130px;
+                        
                         
                             h2{
                                 margin-bottom: 20px;
@@ -117,8 +118,9 @@ body{
                             }
                     }
             }
-            .Main-content span{
+            .Typewriter{
                 color: aqua;
+                transform:translate(-6.475px, - 0.39375px);
             }
             @keyframes slideRight{
                 0%{
