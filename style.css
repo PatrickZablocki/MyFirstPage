@@ -96,8 +96,9 @@ body main .Main-content .Home p {
   overflow: hidden;
   font-size: 2rem;
 }
-body main .Main-content span {
+body main .Typewriter {
   color: aqua;
+  transform: translate(-6.475px, -0.39375px);
 }
 @keyframes slideRight {
   0% {
