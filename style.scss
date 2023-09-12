@@ -32,21 +32,23 @@ $forHeadline-color:#B3B4B6;
 }
 body{
     scroll-behavior: smooth;
-    overflow: hidden;
         header{
             display: flex;
             justify-content: center;
             text-align: center;
             align-items: center;
-            overflow: hidden;
             background-color: #15171cd7;
             position: fixed;
             width: 100%;
+            box-shadow: 5px 5px 5px;
 
 
                 h1{
                     font-size: $font-size-headline;
                     color: $Text-color;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
                 }
                 nav,ul,li,a{
                     display: inline-block;
@@ -63,6 +65,10 @@ body{
                 a:hover{
                     text-decoration: underline;
                     color: $body-color;
+                }
+
+                @media (max-width:768px){ 
+                display:none;
                 }
         }
         main{
@@ -106,8 +112,6 @@ body{
                         align-items: center;
                         margin-right: 150px;
                         margin-bottom: 130px;
-                        
-                        
                             h2{
                                 margin-bottom: 20px;
                                 overflow: hidden;
@@ -140,7 +144,7 @@ body{
                     width: 100%;
                     border-left: 2px solid #4070F4;
                     background-color: $Secondary-color;
-                    animation: animate 4s steps(12) infinite;
+                    animation: animate 3.5s steps(12) infinite;
                 }
                 @keyframes animate{
                     40%, 60%{
@@ -150,16 +154,6 @@ body{
                         left: 0%;
                     }
                 }
-            // @keyframes slideRight{
-            //     0%{
-            //         transform: translateX(-100px);
-            //         opacity: 0;
-            //     }
-            //     100%{
-            //         transform:translateX(0px);
-            //         opacity:1;
-            //     }
-            // }
         }
                 #About-me{
                     background: $Secondary-color;
@@ -208,17 +202,6 @@ body{
                     }
                     svg{
                         transition: transform 0.5s ease-in;
-                    }
-
-                    @keyframes Typewriter {
-                        from{
-                            opacity: 0;
-                            transform: translateY(-10px);
-                        }
-                        to{
-                            opacity: 1;
-                            transform: translateY(0px);
-                        }
                     }
                 }
     
