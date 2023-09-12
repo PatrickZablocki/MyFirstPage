@@ -13,6 +13,7 @@
 
 body {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 body header {
   display: flex;
@@ -96,18 +97,35 @@ body main .Main-content .Home p {
   overflow: hidden;
   font-size: 2rem;
 }
-body main .Typewriter {
-  color: aqua;
-  transform: translate(-6.475px, -0.39375px);
+body main .container {
+  overflow: hidden;
 }
-@keyframes slideRight {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
+body main .container .text {
+  position: relative;
+  color: cyan;
+  font-size: 2rem;
+  font-weight: 600;
+}
+body main .container .text.first-text {
+  color: #fff;
+}
+body main .text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #4070F4;
+  background-color: #232933;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate {
+  40%, 60% {
+    left: calc(100% + 4px);
   }
   100% {
-    transform: translateX(0px);
-    opacity: 1;
+    left: 0%;
   }
 }
 body #About-me {
@@ -159,7 +177,7 @@ body #About-me .About.active svg {
 body #About-me svg {
   transition: transform 0.5s ease-in;
 }
-@keyframes fade {
+@keyframes Typewriter {
   from {
     opacity: 0;
     transform: translateY(-10px);

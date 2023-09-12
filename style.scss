@@ -32,6 +32,7 @@ $forHeadline-color:#B3B4B6;
 }
 body{
     scroll-behavior: smooth;
+    overflow: hidden;
         header{
             display: flex;
             justify-content: center;
@@ -118,20 +119,47 @@ body{
                             }
                     }
             }
-            .Typewriter{
-                color: aqua;
-                transform:translate(-6.475px, - 0.39375px);
+            .container{
+            overflow: hidden;
             }
-            @keyframes slideRight{
-                0%{
-                    transform: translateX(-100px);
-                    opacity: 0;
+                .container .text{
+                    position: relative;
+                    color: cyan;
+                    font-size: 2rem;
+                    font-weight: 600;
                 }
-                100%{
-                    transform:translateX(0px);
-                    opacity:1;
+                .container .text.first-text{
+                    color: #fff;
                 }
-            }
+                .text.sec-text:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-left: 2px solid #4070F4;
+                    background-color: $Secondary-color;
+                    animation: animate 4s steps(12) infinite;
+                }
+                @keyframes animate{
+                    40%, 60%{
+                        left:calc(100% + 4px);
+                    }
+                    100%{
+                        left: 0%;
+                    }
+                }
+            // @keyframes slideRight{
+            //     0%{
+            //         transform: translateX(-100px);
+            //         opacity: 0;
+            //     }
+            //     100%{
+            //         transform:translateX(0px);
+            //         opacity:1;
+            //     }
+            // }
         }
                 #About-me{
                     background: $Secondary-color;
@@ -182,7 +210,7 @@ body{
                         transition: transform 0.5s ease-in;
                     }
 
-                    @keyframes fade {
+                    @keyframes Typewriter {
                         from{
                             opacity: 0;
                             transform: translateY(-10px);
