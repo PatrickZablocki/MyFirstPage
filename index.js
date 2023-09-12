@@ -18,10 +18,11 @@ const text = document.querySelector(".sec-text");
 const textLoad = () => {
     setTimeout(() => {
         text.textContent = "Frontend Devoloper";
-    },0);
+    },4000);
     setTimeout(() => {
         text.textContent = "Web Devoloper";
-    },4000);
+    },8000);
 }
 textLoad();
 setInterval(textLoad,12000);
+loop:true;
